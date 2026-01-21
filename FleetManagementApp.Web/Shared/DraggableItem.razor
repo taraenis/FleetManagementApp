@@ -1,0 +1,25 @@
+@using FleetManagementApp.Core.Services
+@typeparam T
+@inject IDragDropService<T> DragDropService
+
+<div draggable="true"
+    class="draggable"
+    @ondragstart="OnDragStart"
+    @ondragend="OnDragEnd">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter, EditorRequired] public T Item { get; set; } = default!;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    
+    private void OnDragStart()
+    {
+        DragDropService.StartDrag(Item);
+    }
+    
+    private void OnDragEnd()
+    {
+        DragDropService.Clear();
+    }
+}

@@ -1,0 +1,11 @@
+.placed-ship-item[b-y72ll18ava] {
+  border: 1px solid #333;
+  background: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: .5rem;
+  overflow: hidden;
+}

@@ -1,0 +1,12 @@
+@using FleetManagementApp.Core.Models.Domain.Fleets
+<DraggableItem T="Fleet" Item="Fleet">
+    <div class="ship-icon"
+        title="@Fleet.ShipDesignation">
+        🚢
+    </div>
+</DraggableItem>
+
+@code {
+    [Parameter, EditorRequired]
+    public Fleet Fleet { get; set; } = null!;
+}

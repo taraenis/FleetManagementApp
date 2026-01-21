@@ -1,0 +1,75 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FleetManagementApp.Web
+build_property.RootNamespace = FleetManagementApp.Web
+build_property.ProjectDir = /Users/enistara/FleetManagementApp/FleetManagementApp.Web/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/enistara/FleetManagementApp/FleetManagementApp.Web
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Components/FleetItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9GbGVldEl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Components/FleetList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9GbGVldExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Shared/Loading.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0xvYWRpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Components/PlacedShipItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QbGFjZWRTaGlwSXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-y72ll18ava
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Components/Ship.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9TaGlwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-0zbmef95sy
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-jbx7pmcajx
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Shared/DraggableItem.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0RyYWdnYWJsZUl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-sws3lr0qfk
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Shared/Dropzone.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0Ryb3B6b25lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-iwtakcj58w
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-doe3va6g6v
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/enistara/FleetManagementApp/FleetManagementApp.Web/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

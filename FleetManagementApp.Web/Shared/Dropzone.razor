@@ -1,0 +1,71 @@
+@typeparam TDrag
+@using FleetManagementApp.Core.Services
+@typeparam TItem
+
+<div class="dropzone @_dropClass"
+    style="@DropzoneStyle"
+    @ondragover:preventDefault
+    @ondragover="OnDragOver"
+    @ondrop="OnDrop"
+    @ondragenter="OnDragEnter"
+    @ondragleave="OnDragLeave"
+    @ondragover:preventDefault
+    @ondrop="OnDrop">
+    @if (Items.Count == 0)
+    {
+        @Placeholder
+    }
+    else
+    {
+        @foreach (var item in Items)
+        {
+            @ItemTemplate?.Invoke(item)
+        }
+    }
+</div>
+
+@code {
+    [Inject] private IDragDropService<TDrag> DragService { get; set; } = null!;
+    [Parameter, EditorRequired] public List<TItem> Items { get; set; } = new();
+    [Parameter, EditorRequired] public EventCallback<TDrag> OnItemDropped { get; set; }
+    [Parameter, EditorRequired] public RenderFragment? Placeholder { get; set; }
+    [Parameter, EditorRequired] public RenderFragment<TItem>? ItemTemplate { get; set; }
+    [Parameter, EditorRequired] public int Width { get; set; }
+    [Parameter, EditorRequired] public int Height { get; set; }
+    [Parameter, EditorRequired] public int Scale { get; set; }
+    [Parameter, EditorRequired] public string BackgroundColor { get; set; }
+
+    private string _dropClass = string.Empty;
+    private string DropzoneStyle => 
+        $"width: {Width * Scale}px; " +
+        $"height: {Height * Scale}px; " +
+        $"background-color: {BackgroundColor};";
+
+    private static void OnDragOver() {}
+    
+    private void OnDragEnter()
+    {
+        _dropClass = "dropzone-hover";
+    }
+
+    private void OnDragLeave()
+    {
+        _dropClass = string.Empty;
+    }
+
+    private async Task OnDrop()
+    {
+        _dropClass = string.Empty;
+
+        if (!DragService.HasItem)
+            return;
+
+        var draggedItem = DragService.GetItem();
+        DragService.Clear();
+
+        if (draggedItem is null)
+            return;
+
+        await OnItemDropped.InvokeAsync(draggedItem);
+    }
+}

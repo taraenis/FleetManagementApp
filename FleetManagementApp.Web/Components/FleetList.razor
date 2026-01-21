@@ -1,0 +1,9 @@
+@using FleetManagementApp.Core.Models.Domain.Fleets
+@foreach (var fleet in Fleets)
+{
+    <FleetItem Fleet="fleet" />
+}
+
+@code {
+    [Parameter, EditorRequired] public List<Fleet> Fleets { get; set; } =   [];
+}

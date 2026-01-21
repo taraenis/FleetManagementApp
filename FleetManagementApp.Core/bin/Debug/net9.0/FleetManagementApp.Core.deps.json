@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "FleetManagementApp.Core/1.0.0": {
+        "runtime": {
+          "FleetManagementApp.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FleetManagementApp.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

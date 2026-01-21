@@ -1,0 +1,11 @@
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/bin/Debug/net9.0/FleetManagementApp.Core.deps.json
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/bin/Debug/net9.0/FleetManagementApp.Core.dll
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/bin/Debug/net9.0/FleetManagementApp.Core.pdb
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/obj/Debug/net9.0/FleetManagementApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/obj/Debug/net9.0/FleetManagementApp.Core.AssemblyInfoInputs.cache
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/obj/Debug/net9.0/FleetManagementApp.Core.AssemblyInfo.cs
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/obj/Debug/net9.0/FleetManagementApp.Core.csproj.CoreCompileInputs.cache
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/obj/Debug/net9.0/FleetManagementApp.Core.dll
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/obj/Debug/net9.0/refint/FleetManagementApp.Core.dll
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/obj/Debug/net9.0/FleetManagementApp.Core.pdb
+/Users/enistara/FleetManagementApp/FleetManagementApp.Core/obj/Debug/net9.0/ref/FleetManagementApp.Core.dll

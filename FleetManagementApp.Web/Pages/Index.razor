@@ -1,0 +1,115 @@
+﻿@page "/"
+@using FleetManagementApp.Core.Models.Domain.Fleets
+@using FleetManagementApp.Core.Services
+@using FleetManagementApp.Core.Services.Api
+@inject FleetsApiService FleetsApiService 
+@inject BinpackerService BinPackerService
+
+<PageTitle>Fleet Management</PageTitle>
+
+<div class="row p-4">
+    <h1>Fleet Management</h1>
+</div>
+
+<div class="row p-4">
+    @if (!_fleets.Any())
+    {
+        <div class="col-12 text-center">
+            <Loading />
+        </div>
+    }
+    else
+    {
+        <div class="col-md-4">
+            <div class="list-group">
+                <FleetList Fleets="@VisibleFleets" />
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            @if (IsGridCompleted)
+            {
+                <h3 class="text-success">Congrats, you did it! 😊</h3>
+                <button class="btn btn-primary mt-2" @onclick="@OnTryAgain">Try again!</button>
+            }
+            else if (BinPackerService is not null)
+            {
+                <Dropzone TDrag="Fleet"
+                    TItem="@PlacedShip"
+                    Items="@BinPackerService.PlacedShips.ToList()"
+                    Width="@BinPackerService.Width"
+                    Height="@BinPackerService.Height"
+                    Scale="@Scale"
+                    BackgroundColor="@BackgroundColor"
+                    OnItemDropped="@OnItemDropped">
+
+                    <Placeholder>
+                        <div class="d-flex align-items-center justify-content-center h-100">
+                            Drop 🚢 here..
+                        </div>
+                    </Placeholder>
+
+                    <ItemTemplate Context="ship">
+                        <PlacedShipItem Ship="ship"
+                            Scale="@Scale"
+                            OnRotateShip="@OnRotateShip" />
+                    </ItemTemplate>
+                </Dropzone>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private const int Scale = AppConstants.GridScale;
+    private const string BackgroundColor = AppConstants.GridBackgroundColor;
+    private List<Fleet> _fleets = new();
+    private List<Fleet> VisibleFleets => _fleets.Where(f => f.ShipCount > 0).ToList();
+    private bool IsGridCompleted => BinPackerService?.IsCompleted(_fleets) ?? false;
+
+    protected override async Task OnInitializedAsync() => await GetFleets();
+
+    private async Task GetFleets()
+    {
+        var result = await FleetsApiService.GetRandomFleetsAsync();
+        if (!result.IsSuccess || result.Value is null)
+            return;
+        
+        _fleets = result.Value.Fleets;
+        BinPackerService.Initialize(result.Value.AnchorageSize.Width, result.Value.AnchorageSize.Height);
+    }
+
+    private Task OnItemDropped(Fleet fleet)
+    {
+        if (BinPackerService is null || fleet.ShipCount <= 0)
+            return Task.CompletedTask;
+
+        var placedShip = BinPackerService.TryPlace(fleet.ShipDesignation, fleet.SingleShipDimensions, allowRotate: true);
+        if (placedShip is null)
+            return Task.CompletedTask;
+
+        var fleetIndex = _fleets.IndexOf(fleet);
+        _fleets[fleetIndex] = fleet with { ShipCount = fleet.ShipCount - 1 };
+
+        return Task.CompletedTask;
+    }
+
+    private void OnRotateShip(PlacedShip ship)
+    {
+        if (BinPackerService == null)
+            return;
+
+        var rotatedShip = ship.Rotate90();
+        if (!BinPackerService.CanPlace(rotatedShip, ship.X, ship.Y, ship))
+            return;
+
+        BinPackerService.UpdateShip(ship, rotatedShip);
+    }
+
+    private async Task OnTryAgain()
+    {
+        _fleets.Clear();
+        BinPackerService?.Clear();
+        await GetFleets();
+    }
+}

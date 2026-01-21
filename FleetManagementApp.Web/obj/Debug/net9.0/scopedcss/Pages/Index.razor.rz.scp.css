@@ -1,0 +1,13 @@
+.item[b-jbx7pmcajx] {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    font-size: .5rem;
+    border: 1px solid #333;
+    background: #e3f2fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}

@@ -1,0 +1,113 @@
+/* /Components/PlacedShipItem.razor.rz.scp.css */
+.placed-ship-item[b-y72ll18ava] {
+  border: 1px solid #333;
+  background: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: .5rem;
+  overflow: hidden;
+}
+/* /Components/Ship.razor.rz.scp.css */
+.ship[b-0zbmef95sy] {
+  font-size: 1.5rem;
+}
+/* /Pages/Index.razor.rz.scp.css */
+.item[b-jbx7pmcajx] {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    font-size: .5rem;
+    border: 1px solid #333;
+    background: #e3f2fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+/* /Shared/DraggableItem.razor.rz.scp.css */
+.draggable[b-sws3lr0qfk] {
+  cursor: grab;
+}
+/* /Shared/Dropzone.razor.rz.scp.css */
+.dropzone[b-iwtakcj58w] {
+  border: 2px dashed gray;
+  padding: 20px;
+  text-align: center;
+  transition: border 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+.page[b-doe3va6g6v] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-doe3va6g6v] {
+    flex: 1;
+}
+
+.top-row[b-doe3va6g6v] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-doe3va6g6v]  a, .top-row .btn-link[b-doe3va6g6v] {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+    }
+
+    .top-row a:first-child[b-doe3va6g6v] {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-doe3va6g6v] {
+        display: none;
+    }
+
+    .top-row.auth[b-doe3va6g6v] {
+        justify-content: space-between;
+    }
+
+    .top-row a[b-doe3va6g6v], .top-row .btn-link[b-doe3va6g6v] {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-doe3va6g6v] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-doe3va6g6v] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-doe3va6g6v] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row[b-doe3va6g6v], article[b-doe3va6g6v] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}

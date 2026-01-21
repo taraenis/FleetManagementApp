@@ -1,0 +1,29 @@
+@using FleetManagementApp.Core.Models.Domain.Fleets
+<div class="list-group-item bg-white text-black p-3">
+    <div class="mb-2">
+        <div>
+          <strong>@Fleet.ShipDesignation</strong>
+          
+          <span class="badge bg-secondary float-end">
+            @Fleet.ShipCount Units
+          </span>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+           @for (var i = 0; i < Fleet.ShipCount; i++)
+            {
+              <Ship Fleet="Fleet" />
+            }
+        </div>
+
+        <div class="mt-2">
+            <small class="text-secondary font-size-small">
+              Size: @Fleet.SingleShipDimensions.Width x @Fleet.SingleShipDimensions.Height
+            </small>
+        </div>
+    </div>
+</div>
+
+@code {
+  [Parameter] public Fleet Fleet { get; set; } = null!;
+}

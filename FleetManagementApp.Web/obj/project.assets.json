@@ -1,0 +1,98 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "FleetManagementApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/FleetManagementApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FleetManagementApp.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FleetManagementApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../FleetManagementApp.Core/FleetManagementApp.Core.csproj",
+      "msbuildProject": "../FleetManagementApp.Core/FleetManagementApp.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "FleetManagementApp.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/enistara/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/enistara/FleetManagementApp/FleetManagementApp.Web/FleetManagementApp.Web.csproj",
+      "projectName": "FleetManagementApp.Web",
+      "projectPath": "/Users/enistara/FleetManagementApp/FleetManagementApp.Web/FleetManagementApp.Web.csproj",
+      "packagesPath": "/Users/enistara/.nuget/packages/",
+      "outputPath": "/Users/enistara/FleetManagementApp/FleetManagementApp.Web/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/enistara/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "/Users/enistara/FleetManagementApp/FleetManagementApp.Core/FleetManagementApp.Core.csproj": {
+              "projectPath": "/Users/enistara/FleetManagementApp/FleetManagementApp.Core/FleetManagementApp.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

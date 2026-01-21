@@ -1,0 +1,22 @@
+@using FleetManagementApp.Core.Models.Domain.Fleets
+<div class="placed-ship-item position-absolute"
+     style="
+        left:@(Ship.X * Scale)px;
+        top:@(Ship.Y * Scale)px;
+        width:@(Ship.Width * Scale)px;
+        height:@(Ship.Height * Scale)px;"
+    @ondblclick="() => OnRotate(Ship)"
+    @ondblclick:stopPropagation="true">
+    🚢 @Ship.ShipDesignation
+</div>
+
+@code {
+    [Parameter, EditorRequired] public PlacedShip Ship { get; set; } = null!;
+    [Parameter] public int Scale { get; set; }
+    [Parameter] public EventCallback<PlacedShip> OnRotateShip { get; set; }
+
+    private async Task OnRotate(PlacedShip ship)
+    {
+        await OnRotateShip.InvokeAsync(ship);
+    }
+}
