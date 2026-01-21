@@ -27,8 +27,6 @@ A **.NET 9 Blazor Server application** with a **Core library**, **shared compone
 ## Prerequisites
 
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)  
-- Git  
-- IDE: Visual Studio, VS Code, or Rider  
 
 Verify SDK:
 
