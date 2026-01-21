@@ -1,4 +1,2 @@
-echo "bin/" >> .gitignore
-echo "obj/" >> .gitignore
-echo "*.user" >> .gitignore
-echo "*.vs" >> .gitignore
+bin/
+obj/
