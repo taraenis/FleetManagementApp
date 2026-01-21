@@ -18,9 +18,12 @@ A **.NET 9 Blazor Server application** with a **Core library**, **shared compone
 
 - Binpacking
 - Drag & Drop
-- **Core library** containing models and services (`Fleet`, `Ship`, `BinpackerService`, `DragDropService`)
+- Rotate 90
+- No overlapping
+- Find position
+- **Core library** containing models and services (`Fleet`, `BinpackerService`, `DragDropService`)
 - **xUnit tests** for services
-- Single repository containing **Web, Core, Components, and Tests**  
+- Single repository containing **Web, Core, Tests**  
 
 ---
 
