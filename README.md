@@ -10,7 +10,8 @@ A **.NET 9 Blazor Server application** with a **Core library**, **shared compone
 - [Prerequisites](#prerequisites)  
 - [Setup](#setup)  
 - [Running the App](#running-the-app)  
-- [Running Tests](#running-tests)  
+- [Running Tests](#running-tests)
+- [Build App](#running-tests)  
 
 ---
 
@@ -57,7 +58,7 @@ dotnet run --project FleetManagementApp.Web
 dotnet test FleetManagementApp.Tests
 ```
 
-3. **Building App**:
+3. **Build App**:
 
 ```bash
 dotnet clean
