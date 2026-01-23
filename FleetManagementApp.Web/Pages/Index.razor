@@ -2,7 +2,7 @@
 @using FleetManagementApp.Core.Models.Domain.Fleets
 @using FleetManagementApp.Core.Services
 @using FleetManagementApp.Core.Services.Api
-@inject FleetsApiService FleetsApiService 
+@inject FleetsService FleetsService
 @inject BinpackerService BinPackerService
 
 <PageTitle>Fleet Management</PageTitle>
@@ -71,7 +71,7 @@
 
     private async Task GetFleets()
     {
-        var result = await FleetsApiService.GetRandomFleetsAsync();
+        var result = await FleetsService.GetRandomFleetsAsync();
         if (!result.IsSuccess || result.Value is null)
             return;
         
