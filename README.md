@@ -60,3 +60,10 @@ dotnet run --project FleetManagementApp.Web
 ```bash
 dotnet test FleetManagementApp.Tests
 ```
+
+3. **Building App**:
+
+```bash
+dotnet clean
+dotnet build
+```
