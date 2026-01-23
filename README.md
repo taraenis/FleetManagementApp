@@ -58,9 +58,15 @@ dotnet run --project FleetManagementApp.Web
 dotnet test FleetManagementApp.Tests
 ```
 
-3. **Build App**:
+4. **Build App**:
 
 ```bash
 dotnet clean
 dotnet build
+```
+
+5. **Publish App**:
+
+```bash
+dotnet publish -c Release
 ```
